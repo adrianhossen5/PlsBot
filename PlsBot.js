@@ -1,9 +1,8 @@
-require('dotenv').config();
-
-const fetch = require('node-fetch');
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const fetch = require('node-fetch');
 
+require('dotenv').config();
 client.login(process.env.BOTTOKEN);
 client.on('ready', readyDiscord);
 client.on('message', gotMessage);
